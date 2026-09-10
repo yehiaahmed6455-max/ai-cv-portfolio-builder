@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV & Portfolio Generator - اعمل سيرتك الذاتية احترافية</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo">
+                    <i class="fas fa-file-alt"></i>
+                    <span>ProCV</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">الرئيسية</a>
+                    <a href="#features" class="nav-link">المميزات</a>
+                    <a href="#pricing" class="nav-link">الأسعار</a>
+                    <a href="#contact" class="nav-link">تواصل</a>
+                </div>
+                <button class="btn-primary" onclick="goToEditor()">ابدأ الآن</button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>اعمل سيرتك الذاتية الاحترافية في دقائق</h1>
+                <p>منصة ذكية لتوليد CV وبورتفوليو احترافي بسهولة</p>
+                <button class="btn-primary btn-large" onclick="goToEditor()">
+                    <i class="fas fa-rocket"></i> ابدأ الآن مجاناً
+                </button>
+            </div>
+            <div class="hero-image">
+                <div class="mockup">
+                    <div class="mockup-header"></div>
+                    <div class="mockup-line"></div>
+                    <div class="mockup-line short"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2>المميزات</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-magic"></i>
+                    <h3>توليد ذكي</h3>
+                    <p>تقنية متقدمة لتوليد محتوى احترافي وجذاب</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>تصميم احترافي</h3>
+                    <p>قوالب حديثة وجميلة جاهزة للاستخدام</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-download"></i>
+                    <h3>تحميل سهل</h3>
+                    <p>حمل CV بصيغ متعددة (PDF, Word, HTML)</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>متجاوب</h3>
+                    <p>يعمل بسلاسة على كل الأجهزة</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-edit"></i>
+                    <h3>قابل للتعديل</h3>
+                    <p>عدّل المحتوى كما تشاء قبل التحميل</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>آمن وخصوصي</h3>
+                    <p>بيانات آمنة وخصوصية محمية</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <h2>الأسعار</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>مجاني</h3>
+                    <div class="price">$0</div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> CV واحد</li>
+                        <li><i class="fas fa-check"></i> 3 قوالب</li>
+                        <li><i class="fas fa-check"></i> تحميل PDF</li>
+                        <li><i class="fas fa-times"></i> لا توليد ذكي</li>
+                    </ul>
+                    <button class="btn-secondary">ابدأ مجاناً</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="badge">الأكثر شهرة</div>
+                    <h3>احترافي</h3>
+                    <div class="price">$9.99<span>/شهر</span></div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> CV غير محدود</li>
+                        <li><i class="fas fa-check"></i> كل القوالب</li>
+                        <li><i class="fas fa-check"></i> تحميل متعدد</li>
+                        <li><i class="fas fa-check"></i> توليد ذكي</li>
+                        <li><i class="fas fa-check"></i> دعم فني</li>
+                    </ul>
+                    <button class="btn-primary">اشترك الآن</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>مؤسسي</h3>
+                    <div class="price">$29.99<span>/شهر</span></div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> كل شيء في احترافي</li>
+                        <li><i class="fas fa-check"></i> استضافة مجانية</li>
+                        <li><i class="fas fa-check"></i> portfolio خاص</li>
+                        <li><i class="fas fa-check"></i> أولوية في الدعم</li>
+                    </ul>
+                    <button class="btn-secondary">تواصل معنا</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>تواصل معنا</h2>
+            <div class="contact-content">
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <input type="text" placeholder="اسمك" required>
+                    <input type="email" placeholder="بريدك الإلكتروني" required>
+                    <textarea placeholder="رسالتك" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">إرسال</button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@procv.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+966 50 123 4567</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>السعودية، الرياض</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 ProCV. جميع الحقوق محفوظة.</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal for Editor -->
+    <div id="editorModal" class="modal hidden">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeEditor()">&times;</button>
+            <div class="editor-container">
+                <div class="editor-form">
+                    <h2>أنشئ سيرتك الذاتية</h2>
+                    <form onsubmit="generateCV(event)">
+                        <div class="form-group">
+                            <label>الاسم الكامل</label>
+                            <input type="text" id="fullName" placeholder="محمد أحمد" required>
+                        </div>
+                        <div class="form-group">
+                            <label>البريد الإلكتروني</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>رقم الهاتف</label>
+                            <input type="tel" id="phone" placeholder="+966 50 123 4567" required>
+                        </div>
+                        <div class="form-group">
+                            <label>الخبرة (سنوات)</label>
+                            <input type="number" id="experience" placeholder="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label>المجال/التخصص</label>
+                            <select id="field" required>
+                                <option value="">اختر مجالك</option>
+                                <option value="Frontend">Frontend Developer</option>
+                                <option value="Backend">Backend Developer</option>
+                                <option value="Data Science">Data Science</option>
+                                <option value="Design">UI/UX Design</option>
+                                <option value="Marketing">Digital Marketing</option>
+                                <option value="Other">أخرى</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>الملخص المهني</label>
+                            <textarea id="summary" placeholder="اكتب ملخص عن نفسك وخبرتك" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>المهارات (افصل بفاصلة)</label>
+                            <textarea id="skills" placeholder="JavaScript, React, Python, SQL" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-large">
+                            <i class="fas fa-magic"></i> توليد السيرة الذاتية
+                        </button>
+                    </form>
+                </div>
+                <div class="cv-preview" id="cvPreview">
+                    <div class="preview-placeholder">
+                        <p>معاينة السيرة الذاتية ستظهر هنا</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
