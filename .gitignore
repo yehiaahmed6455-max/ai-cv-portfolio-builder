@@ -1,0 +1,9 @@
+templates/
+*.pyc
+__pycache__/
+.env
+.DS_Store
+*.log
+venv/
+.vscode/
+.idea/

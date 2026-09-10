@@ -1,0 +1,24 @@
+language = "python3"
+run = "python app.py"
+
+[env]
+PYTHON_VERSION = "3.9"
+
+[packager]
+manager = "pip"
+ignore-packages = []
+
+[packager.features]
+enableGuessImports = true
+
+[nix]
+pure-nix = false
+
+[unitTest]
+runner = "unittest"
+
+[debugger]
+support = true
+
+[gitHubImport]
+requireAuth = false
